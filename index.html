@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="title">
+        <div class="text">Etch a Sketch</div>
+    </div>
+    <div class="center">
+        <div class="options">
+            <input type="color" id="color" title="Choose the color that you want to use in color mode">
+            <button id="colorButton" class="active" title="Select this mode to draw using the color that you chose above">Color Mode</button>
+            <button id="rainbowButton" title="Select this mode to draw using a random color">Rainbow Mode</button>
+            <button id="clearButton" title="Click this button to clear the grid">Clear</button>
+            <div id="sizeValue">16 x 16</div>
+            <input type="range" min="1" max="100" id="sizeSlider" value="16" title="Use this slider to select the size of the grid">
+        </div>
+        <div id="gridContainer"><div id="grid"></div></div>
+    </div>
+    <div id="footer"><a href="https://github.com/GINOILP4TATINO" id="credits"><img src="github_PNG40.png" alt="gitlogo" id="gitLogo"><div id="name"></div></a></div>
+</body>
+</html>
