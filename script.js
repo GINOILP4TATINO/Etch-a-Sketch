@@ -17,6 +17,7 @@ const password=prompt("Enter Password:");
 if (password==="vito") {
     const vitoMode=document.createElement("button");
     vitoMode.textContent="Vito Mode";
+    vitoMode.setAttribute("title", "The ultimate drawing mode");
     options.insertBefore(vitoMode, rainbowMode);
     vitoMode.addEventListener("click", () => {
         mode="vito";
