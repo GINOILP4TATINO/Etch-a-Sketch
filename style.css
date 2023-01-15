@@ -7,31 +7,32 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 .center {
-    height: 600px;
+    height: 61vh;
     display: flex;
     justify-content: flex-start;
-    width: 1320px;
+    width: 132vh;
     margin: 0 auto;
-    gap: 100px;
+    gap: 10vh;
 }
 .title {
-    height: 150px;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .title .text {
-    font-size: 100px;
+    font-size: 10vh;
 }
 #gridContainer {
-    width: 600px;
+    width: 60vh;
     display: flex;
     box-shadow: 3px 3px 3px gray, -3px 3px 3px gray, 3px -3px 3px gray, -3px -3px 3px gray;
 }
 .options {
-    width: 250px;
+    width: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,13 +41,12 @@ body {
     border-radius: 15px;
 }
 #color {
-    width: 80px;
-    height: 80px;
-    box-sizing: border-box;
-    border: none;
+    width: 10vh;
+    height: 10vh;
     background-color: white;
     cursor: pointer;
     transition: 150ms;
+    border: none;
 }
 #sizeValue {
     text-align: center;
@@ -54,12 +54,13 @@ body {
     font-weight: bold;
 }
 button {
-    width: 200px;
+    width: 20vh;
     font-size: 20px;
     border-radius: 15px;
     border: 2px solid black;
     cursor: pointer;
     transition: 150ms;
+    background-color: white;
 }
 .active {
     color: white;
@@ -81,7 +82,7 @@ button:hover {
     transform: scale(1.1);
 }
 #sizeSlider {
-    width: 200px;
+    width: 20vh;
     cursor: pointer;
     appearance: none;
     border: 2px solid black;
@@ -111,12 +112,20 @@ a {
     display: flex;
     align-items: center;
     font-size: 25px;
+    opacity: 0;
+    transition: linear 200ms;
+    transform: translate(65px);
+}
+#name.hover {
+    opacity: 1;
 }
 #gitLogo.hover {
-    transform: rotate(360deg) scale(1.25);
+    transform: rotate(360deg) scale(1.25) translate(-70px);
 }
 #gitLogo {
     transition: 400ms;
+    position: absolute;
+    left: 49%;
 }
 #sizeSlider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -130,7 +139,4 @@ a {
 }
 #color::-webkit-color-swatch {
     border-radius: 50px;
-}
-#color:hover {
-    transform: scale(1.2);
 }

@@ -40,6 +40,7 @@ if (password==="vito") {
 }
 function updateSize() {
     sizeValue.textContent=`${sizeSlider.value} x ${sizeSlider.value}`;
+    if ("hidden"!=window.getComputedStyle(credits).getPropertyValue('border-top-style')) creditsName.classList.remove("hover");
 }
 function updateGrid() {
     gridContainer.removeChild(grid);
@@ -94,12 +95,10 @@ clear.addEventListener("click", updateGrid);
 credits.addEventListener("mouseover", () => {
     logo.classList.add("hover");
     setTimeout(() => {
-        if ("hidden"===window.getComputedStyle(credits).getPropertyValue('border-top-style')) creditsName.textContent="GINO_IL_P4TATINO";
-    }, 450);
+        creditsName.classList.add("hover");
+    }, 400);
 })
 credits.addEventListener("mouseout", () => {
     logo.classList.remove("hover");
-    setTimeout(() => {
-        creditsName.textContent="";
-    }, 450);
+    creditsName.classList.remove("hover");
 })
