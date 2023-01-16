@@ -47,15 +47,20 @@ function updateGrid() {
     createGrid();
 }
 function colorSquare() {
-    if (mode==="color") this.style.backgroundColor=color.value;
+    let image=document.createElement("img");
+    if (mode==="color") {
+        if (this.hasChildNodes()) this.removeChild(this.lastChild);
+        this.style.backgroundColor=color.value;
+    }
     else if(mode==="rainbow") {
+        if (this.hasChildNodes()) this.removeChild(this.lastChild);
         let color1=Math.floor(Math.random()*(255-0)+0);
         let color2=Math.floor(Math.random()*(255-0)+0);
         let color3=Math.floor(Math.random()*(255-0)+0);
         this.style.backgroundColor="rgb("+color1+", "+color2+", "+color3+")";
     }
     else if(mode==="vito") {
-        let image=document.createElement("img");
+        this.style.backgroundColor="white";
         image.setAttribute("src", "aa.jpg");
         image.setAttribute("style", "max-width: 90%; max-height: 90%;");
         if (!this.hasChildNodes()) this.appendChild(image);
